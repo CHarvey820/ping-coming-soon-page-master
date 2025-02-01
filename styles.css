@@ -1,185 +1,232 @@
 /* Given Stylings */
 :root {
-    /* colors */
-    --clr-blue: hsl(223, 87%, 63%);
-    --clr-paleBlue: hsl(223, 100%, 88%);
-    --clr-ltRed: hsl(354, 100%, 66%);
-    --clr-gray: hsl(0, 0%, 59%);
-    --clr-dkBlue: hsl(209, 33%, 12%);
-  
-    /* font weights */
-    --fw-light: 300;
-    --fw-med: 600;
-    --fw-bold: 700;
-  
-    /* fonts */
-    --font-libreFranklin: "Libre Franklin", sans-serif;
-  }
-  
-  /* CSS reset */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+  /* colors */
+  --clr-blue: hsl(223, 87%, 63%);
+  --clr-paleBlue: hsl(223, 100%, 88%);
+  --clr-ltRed: hsl(354, 100%, 66%);
+  --clr-gray: hsl(0, 0%, 59%);
+  --clr-dkBlue: hsl(209, 33%, 12%);
 
-  * {
-    margin: 0;
-    padding: 0;
-  }
+  /* font weights */
+  --fw-light: 300;
+  --fw-med: 600;
+  --fw-bold: 700;
 
-  body {
-    font-size: 20px;
-    font-family: var(--font-libreFranklin);
-  }
+  /* fonts */
+  --font-libreFranklin: "Libre Franklin", sans-serif;
+}
 
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  h1 {
-    margin-bottom: -2rem;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
 
-  h2{
-    font-weight: var(--fw-light);
-    font-size: 1.4rem;
-  }
+body {
+  font-size: 20px;
+  font-family: var(--font-libreFranklin);
+}
 
-  i {
-    text-align: center;
-    border: solid var(--clr-paleBlue) 1px;
-    padding: .5rem;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 1.5rem;
-    color: var(--clr-blue);
-    display: inline;
-    margin-right: 1rem;
-    margin-bottom: 3rem;
-  }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-  i:hover{
-    background-color: var(--clr-blue);
-    border: solid var(--clr-blue) 1px;
-    color: white;
-  }
+h1 {
+  margin-bottom: -2rem;
+}
 
-  img{
-    max-width: 100%;
-  }
+h2 {
+  font-weight: var(--fw-light);
+  font-size: 1.4rem;
+}
 
-  footer {
-    text-align: center;
-    color: var(--clr-gray);
-  }
+i {
+  text-align: center;
+  border: solid var(--clr-paleBlue) 1px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  color: var(--clr-blue);
+  display: inline;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+}
 
-  #container{
-    max-width: 85%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10rem 0;
-    gap: 4.5rem;
-    margin-bottom: 5rem;
-  }
+i:hover {
+  background-color: var(--clr-blue);
+  border: solid var(--clr-blue) 1px;
+  color: white;
+}
 
-  #emailSubmit{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    width: 90%;
-  }
+img {
+  max-width: 100%;
+}
 
-  #email {
-    padding: 1.5rem 4rem;
-    border: solid var(--clr-paleBlue) 1px;
-    border-radius: 5rem;
-    width: 100%;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
+footer {
+  text-align: center;
+  color: var(--clr-gray);
+}
 
-  #email::placeholder{
-    color: var(--clr-paleBlue);
-    font-weight: var(--fw-light);
-  }
+#container {
+  max-width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 0;
+  gap: 4.5rem;
+  margin-bottom: 5rem;
+}
 
-  .btnSubmit{
-    padding: 1.5rem 14rem;
-    background-color: var(--clr-blue);
-    border-radius: 5rem;
-    border: solid var(--clr-blue) 1px;
-    color: white;
-    font-weight: var(--fw-med);
-    font-size: 1.5rem;
-    font-family: var(--font-libreFranklin);
-    font-weight: var(--fw-med);
-    width: 100%;
-    box-shadow: var(--clr-paleBlue) 0px 7px 29px 0px;
-  }
+#emailSubmit,
+#formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 90%;
+  gap: 1.25rem;
+}
 
-  .btnSubmit:hover{
-    opacity: 70%;
-    cursor: pointer;
-  }
+#formContainer {
+  position: relative;
+}
 
-  .titleMed {
-    color: var(--clr-gray);
-    font-weight: var(--fw-light);
-  }
+#email {
+  padding: 1.5rem 4rem;
+  border-radius: 5rem;
+  max-width: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+}
 
-  .btnSocials{
-    background: none;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    cursor: pointer;
-  }
+#email::placeholder {
+  color: var(--clr-paleBlue);
+  font-weight: var(--fw-light);
+}
+
+.btnSubmit {
+  padding: 1.5rem 3rem;
+  background-color: var(--clr-blue);
+  border-radius: 5rem;
+  border: solid var(--clr-blue) 1px;
+  color: white;
+  font-weight: var(--fw-med);
+  font-size: 1.5rem;
+  font-family: var(--font-libreFranklin);
+  font-weight: var(--fw-med);
+  max-width: 100%;
+  width: 90%;
+  box-shadow: var(--clr-paleBlue) 0px 7px 29px 0px;
+}
+
+.btnSubmit:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
+.titleMed {
+  color: var(--clr-gray);
+  font-weight: var(--fw-light);
+}
+
+.btnSocials {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.emailErrorMsg {
+  color: var(--clr-ltRed);
+  font-size: 1.1rem;
+  font-style: italic;
+  position: absolute;
+  top: 5.5rem;
+  left: 6.5rem;
+}
+
+.borderRed {
+  border: solid var(--clr-ltRed) 1px;
+  margin-bottom: 3rem;
+}
+
+.borderBlue {
+  border: solid var(--clr-paleBlue) 1px;
+}
 
 /* pre-included attribution css moved from index <style> */
-.attribution { font-size: 11px; text-align: center; margin-top: 5rem; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
-
-@media (min-width: 1000px){
-
-  h1{
+/* Desktop View */
+@media (min-width: 1000px) {
+  h1 {
     font-size: 3rem;
     margin-bottom: -2rem;
   }
 
-  #container{
+  #container {
     max-width: 50%;
     gap: 3.5rem;
     margin-bottom: 1rem;
   }
 
-  #emailSubmit{
-    flex-direction: row;
+  #formContainer,
+  #emailSubmit {
     width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  #emailSubmit {
+    flex-direction: row;
   }
 
   #email {
     margin-bottom: 0rem;
-    margin-right: 1.5rem;
     padding: 1rem 2rem;
     font-size: 1.1rem;
   }
 
-  .btnSubmit{
-    padding: 1rem 1.5rem;
+  .btnSubmit {
+    padding: 1rem 2rem;
     width: 40%;
     font-size: 1.1rem;
   }
 
-  
+  .emailErrorMsg {
+    font-size: 0.8rem;
+    top: 4rem;
+    left: 2.5rem;
+  }
+}
 
+@media (max-width: 800px) {
+  #container {
+    padding-bottom: 2rem;
+  }
+
+  .emailErrorMsg {
+    left: 3rem;
+  }
 }

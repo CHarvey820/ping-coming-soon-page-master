@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/73de4aef36.js" crossorigin="anonymous"></script>
+<script src="script.js" async defer></script>
   
   <title>Frontend Mentor | Ping coming soon page</title>
 </head>
@@ -21,10 +22,12 @@
       <img src="./images/logo.svg" alt="PING. Logo">
       <h1><span class="titleMed">We are launching</span> soon!</h1>
       <h2>Subscribe and get notified</h2>
-        <form action="#" method="get" id="emailSubmit">
-          <input type="email" id="email" name="email" placeholder="Your email address..." required/>
-          <input type="submit" value="Notify Me" class="btnSubmit"/>
-        </form>
+
+          <form action="" method="get" id="emailSubmit">
+            <div id="formContainer"><input type="text" id="email" name="email" placeholder="Your email address..." class="borderBlue" required/></div>
+            <input type="submit" value="Notify Me" class="btnSubmit"/>
+          </form>
+
       <img src="images/illustration-dashboard.png" alt="mockup illustration of PING. dashboard">
     </div>
   </main>
